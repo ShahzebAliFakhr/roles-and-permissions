@@ -54,12 +54,14 @@
                 </a>
             </li>
 
+            @if(checkPermissionbyRoleID(Auth::user()->role_id, 'role_read'))
             <li class="nav-item">
                 <a class="nav-link" href="{{url('roles')}}">
                     <i class="fas fa-fw fa-users mr-2"></i>
                     <span>Roles</span>
                 </a>
             </li>
+            @endif
 
             <li class="nav-item">
                 <a class="nav-link" href="{{url('profile')}}">

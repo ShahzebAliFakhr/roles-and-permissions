@@ -23,18 +23,18 @@
                            <th>Delete</th> 
                         </tr>
                         <tr>
-                            <td>Products</td>
+                            <td>Roles</td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="product_create" <?=(in_array('product_create', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_create" <?=(in_array('role_create', $permissions)) ? 'checked' : '' ?>>
                             </td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="product_read" <?=(in_array('product_read', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_read" <?=(in_array('role_read', $permissions)) ? 'checked' : '' ?>>
                             </td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="product_update" <?=(in_array('product_update', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_update" <?=(in_array('role_update', $permissions)) ? 'checked' : '' ?>>
                             </td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="product_delete" <?=(in_array('product_delete', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_delete" <?=(in_array('role_delete', $permissions)) ? 'checked' : '' ?>>
                             </td>
                         </tr>
                     </table>
