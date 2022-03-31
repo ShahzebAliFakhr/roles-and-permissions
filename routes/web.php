@@ -50,16 +50,16 @@ Route::middleware('auth')->group(function () {
     Route::post('profile/update', [AuthController::class, 'profile_update']);
 
     // Roles
-    Route::get('roles', [RoleController::class, 'index']);
+    Route::get('roles', [RoleController::class, 'index'])->middleware('CheckPermission:role_read');
     Route::prefix('role')->group(function () {
-        Route::get('create', [RoleController::class, 'create']);
-        Route::post('save', [RoleController::class, 'save']);
-        Route::get('edit/{id}', [RoleController::class, 'edit']);
-        Route::post('update', [RoleController::class, 'update']);
-        Route::get('delete/{id}', [RoleController::class, 'delete']);
-        Route::get('detail/{id}', [RoleController::class, 'detail']);
-        Route::get('permissions/{id}', [RoleController::class, 'permissions']);
-        Route::post('permissions/update', [RoleController::class, 'permissions_update']);
+        Route::get('create', [RoleController::class, 'create'])->middleware('CheckPermission:role_create');
+        Route::post('save', [RoleController::class, 'save'])->middleware('CheckPermission:role_create');
+        Route::get('edit/{id}', [RoleController::class, 'edit'])->middleware('CheckPermission:role_update');
+        Route::post('update', [RoleController::class, 'update'])->middleware('CheckPermission:role_update');
+        Route::get('delete/{id}', [RoleController::class, 'delete'])->middleware('CheckPermission:role_delete');
+        Route::get('detail/{id}', [RoleController::class, 'detail'])->middleware('CheckPermission:role_read');
+        Route::get('permissions/{id}', [RoleController::class, 'permissions'])->middleware('CheckPermission:role_read');
+        Route::post('permissions/update', [RoleController::class, 'permissions_update'])->middleware('CheckPermission:role_update');
     });
 
 });

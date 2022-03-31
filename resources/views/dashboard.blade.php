@@ -3,6 +3,11 @@
 
 <div class="container-fluid">
     <div class="row">
+        <div class="col-md-12">
+            @if(Session::get("message") && Session::get("class"))
+                <p class="alert alert-{{Session::get('class')}} text-center">{{ Session::get("message") }}</p>
+            @endif
+        </div>
         <div class="col-lg-3 col-md-6 mb-4">
             <a href="#" class="card-link">
                 <div class="card bg-primary text-white shadow h-100">
