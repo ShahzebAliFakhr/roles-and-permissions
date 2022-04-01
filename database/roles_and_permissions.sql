@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2022 at 03:42 PM
+-- Generation Time: Apr 01, 2022 at 07:27 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -110,8 +110,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `permissions`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'ADMIN', '[\"role_create\",\"role_read\",\"role_update\",\"role_delete\"]', 'Y', '2022-03-31 06:17:20', '2022-03-31 07:55:31'),
-(2, 'USER', 'null', 'Y', '2022-03-31 01:17:30', '2022-03-31 08:37:53');
+(1, 'ADMIN', '[\"role_create\",\"role_read\",\"role_update\",\"role_delete\"]', 'Y', '2022-03-31 06:17:20', '2022-04-01 00:25:34'),
+(2, 'USER', 'null', 'Y', '2022-03-31 01:17:30', '2022-03-31 08:47:29');
 
 -- --------------------------------------------------------
 

@@ -25,16 +25,16 @@
                         <tr>
                             <td>Roles</td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="role_create" <?=(in_array('role_create', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_create" <?=(in_array('role_create', $permissions)) ? 'checked' : '' ?> <?=($role->id == 1) ? 'disabled' : ''?>>
                             </td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="role_read" <?=(in_array('role_read', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_read" <?=(in_array('role_read', $permissions)) ? 'checked' : '' ?> <?=($role->id == 1) ? 'disabled' : ''?>>
                             </td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="role_update" <?=(in_array('role_update', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_update" <?=(in_array('role_update', $permissions)) ? 'checked' : '' ?> <?=($role->id == 1) ? 'disabled' : ''?>>
                             </td>
                             <td>
-                                <input type="checkbox" name="permissions[]" value="role_delete" <?=(in_array('role_delete', $permissions)) ? 'checked' : '' ?>>
+                                <input type="checkbox" name="permissions[]" value="role_delete" <?=(in_array('role_delete', $permissions)) ? 'checked' : '' ?> <?=($role->id == 1) ? 'disabled' : ''?>>
                             </td>
                         </tr>
                     </table>
