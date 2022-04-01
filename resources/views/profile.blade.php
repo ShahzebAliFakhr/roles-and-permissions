@@ -43,16 +43,6 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-md-4 col-form-label">Roles</label>
-                            <div class="col-md-8">
-                                <select class="form-control" name="role_id" required>
-                                @foreach($roles as $r)
-                                    <option <?=($r['id'] == $profile->role_id) ? 'selected' : '' ?> value="{{ $r['id'] }}">{{ $r['name'] }}</option>
-                                @endforeach
-                            </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
                             <label class="col-md-4 col-form-label">Picture</label>
                             <div class="col-md-8">
                                 <div class="custom-file">

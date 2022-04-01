@@ -30,7 +30,7 @@ Route::get('register', function () {
     if(Auth::check()){
         return redirect('dashboard');
     }else{
-        $data['roles'] = \App\Models\Role::get()->toArray();
+        $data['roles'] = \App\Models\Role::whereNot('id', 1)->get()->toArray();
         return view('auth.register', $data);
     }
 })->name('register');

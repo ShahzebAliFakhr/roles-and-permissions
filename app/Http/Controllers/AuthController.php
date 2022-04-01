@@ -81,8 +81,7 @@ class AuthController extends Controller
         }else{
 
             $user = [
-                'name'      => $request->input('name'),
-                'role_id'   => $request->input('role_id')
+                'name'      => $request->input('name')
             ];
 
             if($request->has('password') && $request->input('password') != NULL){

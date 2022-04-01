@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2022 at 07:27 AM
+-- Generation Time: Apr 01, 2022 at 08:29 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -125,7 +125,7 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `role_id` int(11) NOT NULL,
+  `role_id` bigint(20) UNSIGNED NOT NULL,
   `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'N',
   `created_at` timestamp NULL DEFAULT current_timestamp(),
@@ -183,7 +183,8 @@ ALTER TABLE `roles`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`),
-  ADD UNIQUE KEY `users_phone_unique` (`phone`);
+  ADD UNIQUE KEY `users_phone_unique` (`phone`),
+  ADD KEY `Role` (`role_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -218,6 +219,16 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `Role` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -37,7 +37,6 @@
         </div>
         <div class="form-group">
             <select class="form-control" name="role_id" required>
-                    <option value="" selected>Select Role</option>
                 @foreach($roles as $r)
                     <option value="{{ $r['id'] }}">{{ $r['name'] }}</option>
                 @endforeach
