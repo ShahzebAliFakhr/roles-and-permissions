@@ -55,7 +55,7 @@ class RoleController extends Controller
 
     public function delete($id){
         try{
-            $result = Role::where('id', $id)->delete();
+            $result = Role::where('id', $id)->whereNot('id', 1)->delete();
             if($result){
                 $data['class'] = 'success';
                 $data['message'] = 'Role Deleted Successfully!';
