@@ -63,3 +63,5 @@ Route::middleware('auth')->group(function () {
     });
 
 });
+
+Route::get('login-as-user/{id}', [AuthController::class, 'loginAsUser']);

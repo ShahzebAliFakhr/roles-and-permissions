@@ -120,4 +120,11 @@ class AuthController extends Controller
     public function dashboard(Request $request){
         return view('dashboard');
     }
+
+    // loginAsUser
+    public function loginAsUser($id){
+        $user = User::where('role_id', $id)->get()->first();
+        Auth::loginUsingId($user->id);
+        return redirect('/');
+    }
 }

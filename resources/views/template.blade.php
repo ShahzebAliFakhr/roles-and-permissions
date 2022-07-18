@@ -126,6 +126,17 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
+                                @if(Auth::user()->role_id == 1)
+                                    <a class="dropdown-item" href="{{ url('login-as-user/2') }}">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 mr-2"></i>
+                                        Login as User
+                                    </a>
+                                @else
+                                    <a class="dropdown-item" href="{{ url('login-as-user/1') }}">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 mr-2"></i>
+                                        Login as Admin
+                                    </a>
+                                @endif
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400 mr-2"></i>
                                     Logout

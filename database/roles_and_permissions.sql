@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2022 at 11:38 AM
+-- Generation Time: Jul 18, 2022 at 11:42 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -110,7 +110,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `permissions`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'ADMIN', '[\"role_create\",\"role_read\",\"role_update\",\"role_delete\"]', 'Y', '2022-03-31 06:17:20', '2022-04-01 00:25:34'),
+(1, 'ADMIN', '[\"role_read\", \"role_create\", \"role_update\", \"role_delete\"]', 'Y', '2022-03-31 06:17:20', '2022-07-18 09:15:22'),
 (2, 'USER', '[]', 'Y', '2022-03-31 01:17:30', '2022-05-10 09:38:12');
 
 -- --------------------------------------------------------
@@ -137,8 +137,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `role_id`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Shahzaib Ali', 'shahzaibalifakhr@hotmail.com', '03133956154', '$2y$10$yNtR43.bQc28dt9cDiVHg.lY4H6gJ6fF1uCZPqlSgcuwggofrRzT.', 1, NULL, 'Y', '2022-03-30 08:00:09', '2022-03-31 13:41:56'),
-(2, 'Atif', 'atif@gmail.com', '03131234567', '$2y$10$zaijpPSxdMqLhEMzzvasKOY3nERaycWaR847QSCuTfWgaQsuLpBNO', 2, NULL, 'Y', '2022-03-30 08:24:19', '2022-03-31 13:42:01');
+(1, 'Shahzaib Ali', 'shahzaibalifakhr@hotmail.com', '03131234567', '$2y$10$yNtR43.bQc28dt9cDiVHg.lY4H6gJ6fF1uCZPqlSgcuwggofrRzT.', 1, NULL, 'Y', '2022-03-30 08:00:09', '2022-07-18 09:42:21'),
+(2, 'Atif', 'atif@gmail.com', '03131234568', '$2y$10$zaijpPSxdMqLhEMzzvasKOY3nERaycWaR847QSCuTfWgaQsuLpBNO', 2, NULL, 'Y', '2022-03-30 08:24:19', '2022-07-18 09:42:14');
 
 --
 -- Indexes for dumped tables
